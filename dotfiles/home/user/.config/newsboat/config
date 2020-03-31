@@ -1,0 +1,20 @@
+download-path ~/Downloads/podcasts/%n
+player cmus
+browser lynx
+
+auto-reload yes
+reload-time 15
+reload-threads 4
+
+color background white black
+color listnormal white black
+color listfocus yellow blue bold
+color listnormal_unread white black bold 
+color listfocus_unread white blue bold
+color info yellow  blue bold
+color article white black
+
+highlight articlelist "(^| )go($|[ ,\.\)])|golang" green default bold
+highlight article "(^| )go($|[ ,\.\)])|golang" green default bold
+highlight articlelist "remote|telecommute|full.?stack|back.?end|software engineer|удал.нн|любой город" green default default
+highlight article "remote|telecommute|full.?stack|back.?end|software engineer|удал.нн|любой город" green default default

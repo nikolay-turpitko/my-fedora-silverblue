@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=NewsBoat
+Comment=An RSS/Atom feed reader for text terminals
+Exec=/usr/bin/newsboat
+Terminal=true

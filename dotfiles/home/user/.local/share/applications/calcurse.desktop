@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Calcurse
+Comment=Text-based organizer
+Exec=/usr/bin/calcurse --directory "Projects/todo/calcurse/"
+Terminal=true

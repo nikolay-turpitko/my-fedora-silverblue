@@ -1,0 +1,84 @@
+# vim plugins
+
+[.vim/pack/plugin/start/FastFold]
+checkout = git clone 'https://github.com/Konfekt/FastFold' 'FastFold'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/ack.vim]
+checkout = git clone 'https://github.com/mileszs/ack.vim.git' 'ack.vim'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/ctrlp.vim]
+checkout = git clone 'https://github.com/ctrlpvim/ctrlp.vim' 'ctrlp.vim'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/nim.vim]
+checkout = git clone 'git://github.com/zah/nim.vim.git' 'nim.vim'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/syntastic]
+checkout = git clone 'https://github.com/scrooloose/syntastic.git' 'syntastic'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/todo.txt-vim]
+checkout = git clone 'git://github.com/freitass/todo.txt-vim.git' 'todo.txt-vim'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/ultisnips]
+checkout = git clone 'https://github.com/SirVer/ultisnips.git' 'ultisnips'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/vim-ace]
+checkout = git clone 'https://github.com/yosssi/vim-ace' 'vim-ace'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/vim-colorschemes]
+checkout = git clone 'https://github.com/flazz/vim-colorschemes.git' 'vim-colorschemes'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/vim-dispatch]
+checkout = git clone 'git://github.com/tpope/vim-dispatch.git' 'vim-dispatch'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/vim-go]
+checkout = git clone 'https://github.com/fatih/vim-go.git' 'vim-go'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/vim-grammarous]
+checkout = git clone 'https://github.com/rhysd/vim-grammarous.git' 'vim-grammarous'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/vim-sensible]
+checkout = git clone 'https://github.com/tpope/vim-sensible.git' 'vim-sensible'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+[.vim/pack/plugin/start/vim-taskwarrior]
+checkout = git clone 'https://github.com/farseer90718/vim-taskwarrior' 'vim-taskwarrior'
+skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
+
+##############################################################################
+# my-debian is a repository, containing my own installation scripts and
+# configuration files. If you are not me, you may want to use your own fork
+# with r/w access to it. You will not be allowed to commit your changes in
+# my repository. Also, if you decide to try my settings, you may need
+# to use https:// scheme instead of ssh one.
+##############################################################################
+
+[Projects/my-debian]
+#checkout = git clone 'https://github.com/nikolay-turpitko/my-debian.git' 'my-debian'
+checkout = git clone 'git@github.com:nikolay-turpitko/my-debian.git' 'my-debian'
+
+##############################################################################
+# Below are private repositories. You may want to remove or replace settings
+# below with your own.
+##############################################################################
+
+[.password-store]
+checkout = git clone 'git@bitbucket.org:nikolay_turpitko/pass.git' '.password-store'
+
+[Projects/current]
+checkout = git clone 'git@bitbucket.org:nikolay_turpitko/current.git' 'current'
+chain = true
+
+[Projects/private-dotfiles]
+checkout = git clone 'git@bitbucket.org:nikolay_turpitko/private-dotfiles.git' 'private-dotfiles'

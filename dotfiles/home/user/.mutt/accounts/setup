@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# Dynamically creates setup for Gmail mailbox (mailboxes and hooks).
+
+# $1 - account name
+# $2 - status color, applying when account selected
+# $3 - "default" means this account is active on startup
+
+# make a fake header mailbox
+mbx=`printf "      %s" "${1^^}"`
+
+cat << EOF
+
+set my_$1_login = "\`gopass show email-and-im/mail.google.com/$1 username\`"
+set my_$1_pass = "\`gopass show -o email-and-im/mail.google.com/$1\`"
+
+alias my-$1 \$my_$1_login
+
+set my_$1_imap_folder = "imaps://\$my_$1_login@imap.gmail.com"
+
+account-hook "(imaps|smtp)://\$my_$1_login" \
+"set imap_user=\"\$my_$1_login\"; \
+ set imap_pass=\"\$my_$1_pass\"; \
+ set smtp_pass=\"\$my_$1_pass\";"
+
+mailboxes "$mbx"
+mailboxes "\$my_$1_imap_folder/INBOX"
+mailboxes "\$my_$1_imap_folder/[Gmail].All Mail"
+mailboxes "\$my_$1_imap_folder/[Gmail].Sent Mail"
+mailboxes "\$my_$1_imap_folder/[Gmail].Drafts"
+mailboxes "\$my_$1_imap_folder/[Gmail].Spam"
+mailboxes "\$my_$1_imap_folder/[Gmail].Trash"
+
+folder-hook (imaps://\$my_$1_login) \
+"set my_login=\"\$my_$1_login\"; \
+ set my_mbox_name=\"$1\"; \
+ set my_status_color=\"$2\"; \
+ source \"~/.mutt/accounts/gmail\";"
+
+EOF
+
+[ -n "$3" ] && echo \
+"set my_login=\"\$my_$1_login\"; \
+ set my_mbox_name=\"$1\"; \
+ set my_status_color=\"$2\"; \
+ source \"~/.mutt/accounts/gmail\";"

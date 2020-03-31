@@ -1,0 +1,12 @@
+#!/bin/bash
+
+xdg-settings set default-web-browser chromium.desktop
+xdg-mime default org.pwmt.zathura.desktop application/pdf
+xdg-mime default feh.desktop image/jpeg
+xdg-mime default feh.desktop image/png
+
+mkdir -p "$HOME/.vim/spell"
+wget -NP "$HOME/.vim/spell" http://ftp.vim.org/vim/runtime/spell/ru.utf-8.spl
+wget -NP "$HOME/.vim/spell" http://ftp.vim.org/vim/runtime/spell/ru.utf-8.sug
+
+echo "Done"

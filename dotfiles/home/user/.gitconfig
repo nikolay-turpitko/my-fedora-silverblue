@@ -1,0 +1,8 @@
+[user]
+	email = nikolay@turpitko.com
+	name = Nikolay Turpitko
+[core]
+	autocrlf = input
+	editor = vim
+[push]
+	default = simple

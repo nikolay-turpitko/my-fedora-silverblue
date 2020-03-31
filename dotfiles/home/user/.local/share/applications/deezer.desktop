@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Deezer in Chromium
+Comment=Deezer in Chromium
+Exec=/usr/bin/chromium-browser --profile-directory="Profile 1" --app="https://www.deezer.com"
+Terminal=false

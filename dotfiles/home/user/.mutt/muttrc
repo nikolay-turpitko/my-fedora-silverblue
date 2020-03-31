@@ -1,0 +1,68 @@
+source ~/.mutt/colors
+source ~/.mutt/sidebar
+
+# Scripts in the "~/.mutt/accounts" folder use `gopass` tool to pull account names,
+# logins and passwords from it. Accounts should be stored in the tree structure
+# like following:
+# email-and-im/google.com/work
+# email-and-im/google.com/personal
+#   ...
+#
+# where file name correspond to account name. Each file should be in a yaml
+# format as described at
+# https://github.com/justwatchcom/gopass/blob/master/docs/setup.md#filling-in-passwords-from-browser.
+# In short: first line is a password, next line is a yaml header delimiter,
+# and fields "username" and "signature" should be below:
+#
+# xxx
+# ---
+# username: nick
+# signature: Best,
+#
+# Names of accounts do not hardcoded in the scripts.  But name of default
+# account passed as an argument to the "~/.mutt/accounts/setup-all" script
+# (and could be changed below). This is used to activate it on startup.
+#
+# All accounts are supposed to be Gmail accounts with IMAP and SMTP access.
+# Note: accounts should be configured to allow IMAP access from "less secure"
+# apps (https://support.google.com/accounts/answer/6010255)
+# and folders should be enabled for IMAP access (GMail/Settings/Labels/Show in IMAP).
+
+source "~/.mutt/accounts/setup-all personal |"
+
+mailboxes "      LOCAL"
+mailboxes /var/mail/nick
+folder-hook /var/mail/nick source "~/.mutt/accounts/local"
+
+set realname            = "Nikolay Turpitko"
+set move                = no
+set copy                = no
+set delete              = yes
+set imap_keepalive      = 30
+set timeout             = 60    # idle time before scanning
+set mail_check          = 60    # minimum time between scans
+set ssl_starttls        = yes
+set ssl_force_tls       = yes
+set ssl_use_tlsv1       = yes
+set ssl_use_sslv3       = no
+set smtp_authenticators = "plain"
+set sort		= reverse-threads
+set sort_aux		= last-date-received
+set text_flowed         = yes
+
+set header_cache        = "~/.cache/mutt/headers"
+set message_cachedir    = "~/.cache/mutt/bodies"
+set certificate_file    = "~/.mutt/certificates"
+
+set query_command       = "goobook query '%s'"
+bind editor <Tab> complete-query
+
+auto_view text/html application/pdf
+unset imap_passive           # allow mutt to open new imap connection automatically
+
+#set print_command="muttprint -P A4 -p TO_FILE:/tmp/$USER.ps && evince /tmp/$USER.ps"
+#set print_command="pandoc -S -t html5 --self-contained -o /tmp/$USER.html && firefox /tmp/$USER.html"
+#set print_command="pandoc -t odt -o /tmp/$USER.odt && libreoffice /tmp/$USER.odt"
+#set print_command="pandoc -t odt -o /tmp/$USER.odt && abiword /tmp/$USER.odt"
+set print_command="lp -d PDF -o \"page-top=72 page-bottom=72 page-left=72 page-right=72\" -t mail && sleep 5 && evince ~/PDF/mail.pdf"
+

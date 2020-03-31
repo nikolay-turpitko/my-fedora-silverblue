@@ -1,0 +1,4 @@
+ENTRY "home" URL "~"
+ENTRY "work" URL "~/work"
+ENTRY "Projects" URL "~/Projects"
+ENTRY "shared" URL "/home/shared"

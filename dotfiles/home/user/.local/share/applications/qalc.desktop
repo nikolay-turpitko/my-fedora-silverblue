@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Qalc
+Comment=Powerful and easy to use command line calculator
+Exec=/usr/bin/qalc
+Terminal=true

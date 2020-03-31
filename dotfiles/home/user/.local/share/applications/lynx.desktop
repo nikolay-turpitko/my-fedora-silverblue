@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Lynx
+Comment=A general purpose distributed information browser for the World Wide Web
+Exec=/usr/bin/lynx %U
+Terminal=true

@@ -1,0 +1,6 @@
+{
+    "DefaultDownloadDirectory": "/home/${user_name}/Downloads",
+    "PasswordManagerEnabled": false
+}
+
+

@@ -1,0 +1,31 @@
+# Common settings for Gmail accounts.
+
+set from         = "$realname <$my_login>"
+set my_imap_host = "imap.gmail.com"
+set my_smtp_host = "smtp.gmail.com:587"
+set smtp_url     = "smtp://$my_login@$my_smtp_host/"
+set folder       = "imaps://$my_login@$my_imap_host/"
+set spoolfile    = "+INBOX"
+set mbox         = "+[Gmail]/All Mail"
+set record       = "+[Gmail]/Sent Mail"
+set postponed    = "+[Gmail]/Drafts"
+set trash        = "+[Gmail]/Trash"
+set signature    = "gopass show email-and-im/mail.google.com/$my_mbox_name signature 2>/dev/null |"
+
+color sidebar_divider   $my_status_color default
+color sidebar_spoolfile $my_status_color default
+color status            black            $my_status_color
+color indicator         black            $my_status_color
+
+macro index D \
+    "<save-message>+[Gmail]/Trash<enter>" \
+    "move message to the trash"
+
+macro index S \
+    "<save-message>+[Gmail]/Spam<enter>"  \
+    "mark message as spam"
+
+macro index,pager A \
+    "<save-message>+[Gmail]/All%20Mail<enter><enter>" \
+    "Archive"
+

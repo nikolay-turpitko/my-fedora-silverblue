@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Midnight Commander
+Comment=Two panel file manager
+Exec=/usr/bin/mc
+Terminal=true

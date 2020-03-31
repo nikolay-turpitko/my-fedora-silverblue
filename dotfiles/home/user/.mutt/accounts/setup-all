@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Selects all email account from `gopass` and prepares mailboxes for them.
+# Accounts should be stored with path like "email-and-im/google.com/name",
+# where "name" is a logical account name, like "work" or "personal". See
+# comments on format in `~/.mutt/muttrc`. Script takes a color name for account
+# from the hardcoded list.
+
+# $1 - default account name, account with this name will be activated at startup.
+
+dft="$1"
+
+colors=(
+'magenta'
+'green'
+'yellow'
+'red'
+'cyan'
+'blue'
+)
+
+c=0
+sz=${#colors[@]}
+
+for acc in $(gopass ls -f -s email-and-im/mail.google.com | cut -d/ -f1 | sort -u); do
+  d=""
+  if [ -z "$dft" ] || [ "$1" = "$acc" ]; then
+    d="default"
+    dft="$acc"
+  fi
+  echo "source \"~/.mutt/accounts/setup $acc ${colors[c % sz]} $d |\""
+  c=$(( $c + 1 ))
+done

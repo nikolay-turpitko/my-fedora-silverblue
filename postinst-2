@@ -1,0 +1,40 @@
+#!/bin/bash
+
+rpm-ostree upgrade
+
+rpm-ostree install \
+    calcurse \
+    chromium \
+    cmus \
+    feh \
+    git \
+    golang \
+    gopass \
+    grim \
+    jq \
+    lynx \
+    mako \
+    mc \
+    meld \
+    mplayer \
+    mutt \
+    myrepos \
+    newsboat \
+    nnn \
+    pinta \
+    pmount \
+    qalc \
+    slurp \
+    stow \
+    sway \
+    task \
+    tmate \
+    tmux \
+    vim \
+    wl-clipboard \
+    wofi \
+    zathura
+
+flatpak install org.telegram.desktop
+
+echo "You should reboot now"

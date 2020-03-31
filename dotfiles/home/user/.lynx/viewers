@@ -1,0 +1,7 @@
+#VIEWER:application/postscript:ghostview %s&:XWINDOWS                                               
+VIEWER:image/gif:feh %s&:XWINDOWS                                                                  
+VIEWER:image/x-xbm:feh %s&:XWINDOWS                                                                
+VIEWER:image/png:feh %s&:XWINDOWS                                                                  
+VIEWER:image/tiff:feh %s&:XWINDOWS                                                                 
+VIEWER:image/jpeg:feh %s&:XWINDOWS                                                                 
+#VIEWER:video/mpeg:mplayer %s &:XWINDOWS 

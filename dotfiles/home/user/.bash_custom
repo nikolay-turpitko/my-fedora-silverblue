@@ -1,0 +1,19 @@
+# TNL: custom .profile, explicitly invoked from .bash_profile and .bashrc
+# So, I put here all my customizations like PATH, etc.
+
+export GPG_TTY=$(tty)
+
+if [ "$DESKTOP_SESSION" = "sway" ]; then
+    export $(gnome-keyring-daemon --start)
+fi
+
+source <(gopass completion bash)
+
+alias cal='cal -y -m'
+alias wttr='curl wttr.in/barnaul'
+alias calcurse='calcurse --directory ~/Projects/todo/calcurse/'
+alias docker='podman'
+alias myip='curl http://ipecho.net/plain; echo'
+
+dict() { curl -s "dict://dict.org/d:$@"; }
+

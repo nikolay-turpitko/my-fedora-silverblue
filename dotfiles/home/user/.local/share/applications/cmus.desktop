@@ -1,0 +1,6 @@
+[Desktop Entry]
+Comment=Text-based audio player
+Type=Application
+Exec=/usr/bin/cmus
+Name=CMus
+Terminal=true

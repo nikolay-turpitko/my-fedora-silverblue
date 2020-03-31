@@ -1,0 +1,18 @@
+set from         = ""
+set my_imap_host = ""
+set my_smtp_host = ""
+set smtp_url     = ""
+set folder       = ""
+set spoolfile    = ""
+set mbox         = ""
+set record       = ""
+set postponed    = ""
+set trash        = ""
+set signature    = ""
+
+set my_status_color = "red"
+
+color sidebar_divider   $my_status_color default
+color sidebar_spoolfile $my_status_color default
+color status            black            $my_status_color
+color indicator         black            $my_status_color
