@@ -68,6 +68,10 @@ skip = [ "$1" = "commit" -o "$1" = "record" -o "$1" = "push" ]
 #checkout = git clone 'https://github.com/nikolay-turpitko/my-debian.git' 'my-debian'
 checkout = git clone 'git@github.com:nikolay-turpitko/my-debian.git' 'my-debian'
 
+[Projects/my-fedora-silverblue]
+#checkout = git clone 'https://github.com/nikolay-turpitko/my-fedora-silverblue.git' 'my-fedora-silverblue'
+checkout = git clone 'git@github.com:nikolay-turpitko/my-fedora-silverblue.git' 'my-fedora-silverblue'
+
 ##############################################################################
 # Below are private repositories. You may want to remove or replace settings
 # below with your own.
