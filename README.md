@@ -1,5 +1,11 @@
 # Custom installation of `Fedora Silverblue`
 
+TL;DR; This project contains custom anaconda kickstarter configuration,
+post-installation scripts, personal configuration files and instructions to
+automate initial setup of Fedora Silverblue with Sway, Gopass and my
+personal preferences and personal projects. You may use it on your own
+discretion, but check everything twice.
+
 ## Using kickstarter file during installation
 
 To use kickstarter preset file, it should be available for target system.
@@ -33,7 +39,7 @@ My personal settings:
 ## After installation
 
 - Copy content of this folder to target machine using scp or git (`scp -r nick@10.0.2.2:/home/nick/Projects/my-fedora-silverblue ~/Downloads`).
-- Run `postinst-*` scripts, rebooting after between them.
+- Run `postinst-*` scripts, rebooting between them as requested.
 
 ## Other manual steps after installation
 
