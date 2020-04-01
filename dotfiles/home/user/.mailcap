@@ -1,0 +1,4 @@
+image/*;         /usr/bin/feh %s
+text/html;       /usr/bin/lynx %s; nametemplate=%s.html
+text/html;       /usr/bin/lynx -dump %s; nametemplate=%s.html; copiousoutput
+application/pdf; /usr/bin/less %s; nametemplate=%s.pdf; copiousoutput
