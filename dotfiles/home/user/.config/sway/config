@@ -233,6 +233,10 @@ input type:keyboard {
     xkb_options grp:toggle
 }
 
+input type:touchpad {
+    tap enabled
+}
+
 seat * hide_cursor 2000
 
 include /etc/sway/config.d/*
