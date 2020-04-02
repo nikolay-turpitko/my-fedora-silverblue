@@ -7,6 +7,8 @@ sudo rpm-ostree install \
     https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 sudo rsync -r ./dotfiles/etc/ /etc
+sudo chmod -R a+r /etc/chromium/policies
+sudo chmod a+x /etc/chromium/policies /etc/chromium/policies/managed /etc/chromium/policies/recommended
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
