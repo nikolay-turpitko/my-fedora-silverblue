@@ -21,6 +21,8 @@ rpm-ostree install \
     myrepos \
     newsboat \
     nnn \
+    pandoc \
+    parallel \
     pinta \
     pmount \
     qalc \
