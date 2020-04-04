@@ -26,6 +26,7 @@ rpm-ostree install \
     pinta \
     pmount \
     qalc \
+    ripgrep \
     slurp \
     stow \
     sway \
