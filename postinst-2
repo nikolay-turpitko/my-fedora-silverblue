@@ -30,6 +30,7 @@ rpm-ostree install \
     stow \
     sway \
     task \
+    tigervnc \
     tmate \
     tmux \
     vim \

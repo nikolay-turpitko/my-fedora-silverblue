@@ -95,3 +95,27 @@ My personal settings:
 7. Re-login (use `Alt+Shift+E` to exit `sway`).
 
 8. Run `vim +GoInstallBinaries +"helptags ALL" +q`.
+
+## Additional packages
+
+### Google Cloud SDK
+
+Repository definition should be added to `/etc/yum.repos.d` by the `postinst-*`
+scripts. Cloud SDK should be available for installation. I installed it in the `toolbox`:
+
+    toolbox create -c work
+    toolbox enter -c work
+    sudo dnf install google-cloud-sdk google-cloud-sdk-app-engine-go
+
+I'm not sure if this is a good idea to do it like this. Will see.
+
+### MySQL Workbench
+
+See https://dev.mysql.com/downloads/repo/yum/ for fresh download link.
+
+    cd Downloads
+    wget https://dev.mysql.com/get/mysql80-community-release-fc31-1.noarch.rpm
+    rpm-ostree install mysql80-community-release-fc31-1.noarch.rpm
+    reboot
+    rpm-ostree install mysql-workbench
+
