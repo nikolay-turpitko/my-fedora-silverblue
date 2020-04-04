@@ -119,3 +119,15 @@ See https://dev.mysql.com/downloads/repo/yum/ for fresh download link.
     reboot
     rpm-ostree install mysql-workbench
 
+
+# Problems
+
+- `tigervnc` connects to Mac OS X and displays Login Window, but Mac OS doesn't
+  accept any password entered. If login on Mac OS host while `tigervnc` is
+  connected, screen is shared. But I was not able to login remotely. I tried
+  another vnc client (installed `Remotely` from `flatpak`), but it had the same
+  issue.
+
+- `fairjail` is not compatible with `Fedora Silverblue` due of different system
+  folders layout. `fairjail` team accepted the issue and decided to not support
+  `Fedora Silverblue` because of amount of efforts required.
