@@ -1,0 +1,1 @@
+I did `rpm-ostree install NetworkManager-strongswan`, but haven't experimented with it yet. Try to setup it.
