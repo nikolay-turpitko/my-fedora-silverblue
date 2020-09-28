@@ -23,5 +23,7 @@ Command history:
     rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-32.noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-32.noarch.rpm
     rpm-ostree install gopass
     reboot
-
+    
+    toolbox enter -c work
+    sudo dnf update && sudo dnf upgrade
 
