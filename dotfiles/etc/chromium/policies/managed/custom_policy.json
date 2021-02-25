@@ -1,13 +1,13 @@
 {
-      "ExtensionInstallForcelist": [
-	      "jfchnphgogjhineanplmfkofljiagjfb;https://clients2.google.com/service/update2/crx",
-	      "dbepggeogbaibhgnhhndojpepiihcmeb;https://clients2.google.com/service/update2/crx",
-          "bkdgflcldnnnapblkhphbgpggdiikppg:https://clients2.google.com/service/update2/crx",
-	      "cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx",
-          "iakcnnmjbdoemkjecojadhpinebnkipm;https://clients2.google.com/service/update2/crx",
-          "kejemfjfgoaekplmemlkjljcfloiemho;https://clients2.google.com/service/update2/crx",
-          "kejemfjfgoaekplmemlkjljcfloiemho;https://clients2.google.com/service/update2/crx"
-      ],
-      "ManagedBookmarks": [{"url": "file:///home/nick/Projects/bookmarks/html", "name": "My Bookmarks"}]
+    "ExtensionInstallForcelist": [
+        "jfchnphgogjhineanplmfkofljiagjfb;https://clients2.google.com/service/update2/crx",
+        "dbepggeogbaibhgnhhndojpepiihcmeb;https://clients2.google.com/service/update2/crx",
+        "bkdgflcldnnnapblkhphbgpggdiikppg:https://clients2.google.com/service/update2/crx",
+        "cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx",
+        "iakcnnmjbdoemkjecojadhpinebnkipm;https://clients2.google.com/service/update2/crx",
+        "kejemfjfgoaekplmemlkjljcfloiemho;https://clients2.google.com/service/update2/crx",
+        "kejemfjfgoaekplmemlkjljcfloiemho;https://clients2.google.com/service/update2/crx"
+    ],
+    "ManagedBookmarks": [{"url": "file:///home/nick/Projects/bookmarks/html", "name": "My Bookmarks"}]
 }
 

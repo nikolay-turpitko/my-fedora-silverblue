@@ -1,1 +1,2 @@
-I did `rpm-ostree install NetworkManager-strongswan`, but haven't experimented with it yet. Try to setup it.
+- I did `rpm-ostree install NetworkManager-strongswan`, but haven't experimented with it yet. Try to setup it.
+- Dotfiles not managed with mr/stow as I did in Debian.

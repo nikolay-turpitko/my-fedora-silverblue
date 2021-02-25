@@ -17,3 +17,4 @@ alias myip='curl http://ipecho.net/plain; echo'
 
 dict() { curl -s "dict://dict.org/d:$@"; }
 
+export EDITOR=/usr/bin/vim
