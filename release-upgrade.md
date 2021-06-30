@@ -17,7 +17,7 @@ Command history:
     rpm-ostree uninstall gopass
     rpm-ostree uninstall rpmfusion-free-release-31-1.noarch rpmfusion-nonfree-release-31-1.noarch
     ostree remote list
-    ostree remote gpg-import fedora -k /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-32-primary
+    sudo ostree remote gpg-import fedora -k /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-32-primary
     rpm-ostree rebase fedora:fedora/32/x86_64/silverblue
     rpm-ostree upgrade
     rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-32.noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-32.noarch.rpm
