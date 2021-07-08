@@ -1,0 +1,8 @@
+#!/bin/bash
+
+flatpak install flathub com.visualstudio.code
+flatpak install flathub org.freedesktop.Sdk.Extension.golang
+
+# run with env var:
+# FLATPAK_ENABLE_SDK_EXT=golang flatpak run com.visualstudio.code
+
